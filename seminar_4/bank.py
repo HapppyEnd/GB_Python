@@ -83,7 +83,7 @@ def withdraw(amount):
             bank_account = bank_account - amount - res
             operations.append(
                 f'Снятие с карты {amount} у.е. Процент за снятие {int(res)} '
-                f' у.е.. Итого {bank_account} у.е.')
+                f' у.е.. Итого {int(bank_account)} у.е.')
 
 
 def exit():
@@ -100,12 +100,15 @@ def exit():
     operations.append(f'Возьмите карту на которой {bank_account} у.е.')
 
 
-deposit(1000)
+deposit(1000000000000000)
 withdraw(200)
 withdraw(300)
 deposit(500)
 withdraw(3000)
 exit()
+
+print(operations)
+
 
 print(operations)
 
