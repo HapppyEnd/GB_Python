@@ -77,13 +77,13 @@ def withdraw(amount):
     if bank_account < amount:
         operations.append(
             f'Недостаточно средств. Сумма с комиссией '
-            f'{amount + res} у.е. На карте {bank_account} у.е.')
+            f'{int(amount + res)} у.е. На карте {bank_account} у.е.')
     if check_multiplicity(amount):
         if bank_account > amount:
             bank_account = bank_account - amount - res
             operations.append(
-                f'Снятие с карты {amount} у.е. Процент за снятие {int(res)} у.е.. '
-                f'Итого {bank_account} у.е.')
+                f'Снятие с карты {amount} у.е. Процент за снятие {int(res)} '
+                f' у.е.. Итого {bank_account} у.е.')
 
 
 def exit():
@@ -100,10 +100,12 @@ def exit():
     operations.append(f'Возьмите карту на которой {bank_account} у.е.')
 
 
-deposit(1000000000000000)
+deposit(1000)
 withdraw(200)
 withdraw(300)
 deposit(500)
 withdraw(3000)
 exit()
+
 print(operations)
+
