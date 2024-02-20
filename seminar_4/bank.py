@@ -82,7 +82,7 @@ def withdraw(amount):
         if bank_account > amount:
             bank_account = bank_account - amount - res
             operations.append(
-                f'Снятие с карты {amount} у.е. Процент за снятие {res} у.е.. '
+                f'Снятие с карты {amount} у.е. Процент за снятие {int(res)} у.е.. '
                 f'Итого {bank_account} у.е.')
 
 
