@@ -12,4 +12,3 @@ print(result_list)
 print(end_time)
 my_list = [1, 1, 1, 1, 2, 3, 4, 1, 3, 2, 4, 5, 7, 8]
 print(list(set(my_list)))
-11111111                                                                                
