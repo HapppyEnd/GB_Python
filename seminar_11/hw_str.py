@@ -44,7 +44,3 @@ class MyStr(str):
         создания точно такого же объекта MyStr с теми же значениями."""
         return (f"{self.__class__.__name__}"
                 f"({super().__repr__()}, '{self.author}')")
-
-
-my_string = MyStr("Пример текста", "Иван")
-print(repr(my_string))
